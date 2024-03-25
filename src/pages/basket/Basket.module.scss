@@ -1,0 +1,32 @@
+.Basket {
+	.content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.cards {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid;
+			.card {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 20px;
+				.cardContent {
+					border: 1px solid;
+					border-radius: 5px;
+					width: 335px;
+					height: auto;
+					.mapContent {
+						img {
+							width: 300px;
+							height: auto;
+							border-radius: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

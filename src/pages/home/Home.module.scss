@@ -1,0 +1,38 @@
+.Home {
+	.content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 20px;
+		.mapContent {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.cards {
+				width: 330px;
+				height: fixed 697px;
+				padding: 0px, 0px, 44px, 0px;
+				border: 1px solid;
+				border-radius: 8px;
+				gap: 60px;
+				.card {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+					img {
+						width: 315px;
+						height: 390px;
+						border-radius: 8px;
+					}
+				}
+			}
+		}
+	}
+	.buttonContent {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
