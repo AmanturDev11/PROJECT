@@ -63,5 +63,5 @@ export const {
 	useGetBasketQuery,
 	usePostBasketMutation,
 	useAddPluesMutation,
-	useAddBuyMutation
+	useAddBuyMutation,
 } = basketApi;

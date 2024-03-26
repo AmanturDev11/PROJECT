@@ -5,6 +5,8 @@ import {
 	useGetBasketQuery,
 } from "../../redux/api/basket";
 import scss from "./Basket.module.scss";
+import Header from "../../components/layout/header/Header";
+import Footer from "../../components/layout/footer/Footer";
 
 interface SelectedProps {}
 
@@ -43,34 +45,44 @@ const Selected: React.FC<SelectedProps> = () => {
 		await addBuy({ newProduct, id });
 	};
 	return (
-		<div className={scss.Basket}>
-			<div className="container">
-				<div className={scss.content}>
-					<div className={scss.cards}>
-						<div className={scss.card}>
-					{basketProduct.map((item) => (
-						<div className={scss.cardContent} key={item.product._id}>
-							<div className={scss.mapContent}>
-							<img src={item.product.photoUrl} alt={item.product.name} />
-							<h2>{item.product.price}</h2>
-							<button onClick={() => handlePluesProduct(item.product._id)}>
-								+
-							</button>
-							<span>{item.product.quantity}</span>
-							<button onClick={() => handleMinutesProduct(item.product._id)}>
-								-
-							</button>
-							<button onClick={() => handleBuyProduct(item.product._id)}>
-								Купить
-							</button>
+		<>
+			<Header />
+			<div className={scss.Basket}>
+				<div className="container">
+					<div className={scss.content}>
+						<div className={scss.cards}>
+							<div className={scss.card}>
+								{basketProduct.map((item) => (
+									<div className={scss.cardContent} key={item.product._id}>
+										<div className={scss.mapContent}>
+											<img
+												src={item.product.photoUrl}
+												alt={item.product.name}
+											/>
+											<h2>{item.product.price}</h2>
+											<button
+												onClick={() => handlePluesProduct(item.product._id)}>
+												+
+											</button>
+											<span>{item.product.quantity}</span>
+											<button
+												onClick={() => handleMinutesProduct(item.product._id)}>
+												-
+											</button>
+											<button
+												onClick={() => handleBuyProduct(item.product._id)}>
+												Купить
+											</button>
+										</div>
+									</div>
+								))}
 							</div>
-						</div>
-					))}
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+			<Footer />
+		</>
 	);
 };
 

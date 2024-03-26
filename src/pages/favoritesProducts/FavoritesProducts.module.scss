@@ -1,0 +1,12 @@
+.FavoritesProducts {
+	.content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		img {
+			width: 390px;
+			border-radius: 5px;
+		}
+	}
+}
